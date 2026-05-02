@@ -4,7 +4,7 @@
 
 ### Member A's Files (FTP Server)
 # Member A owns these files:
-'''
+''' python
 setup_ftp.sh                           # Main FTP setup script
 configs/vsftpd.conf.template           # FTP configuration reference
 scripts/ftp_user_manager.sh             # FTP whitelist management
