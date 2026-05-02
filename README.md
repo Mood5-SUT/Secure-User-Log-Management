@@ -2,7 +2,7 @@
 
 ## File Ownership & Responsibilities
 
-### Member A's Files (FTP Server)
+### Amr's Files (FTP Server)
 
 **Member A owns these files:**
 
@@ -17,7 +17,7 @@
 
 ---
 
-### Member B's Files (Log Analysis)
+### Mohamed's Files (Log Analysis)
 
 **Member B owns these files:**
 
@@ -33,7 +33,7 @@
 
 ---
 
-### Member C's Files (User Management)
+### Mahmoud's Files (User Management)
 
 **Member C owns these files:**
 
