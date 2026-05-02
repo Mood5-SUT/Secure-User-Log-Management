@@ -4,12 +4,14 @@
 
 ### Member A's Files (FTP Server)
 # Member A owns these files:
+'''
 setup_ftp.sh                           # Main FTP setup script
 configs/vsftpd.conf.template           # FTP configuration reference
 scripts/ftp_user_manager.sh             # FTP whitelist management
 scripts/setup_ftp_user.sh               # FTP directory setup per user
 tests/test_ftp.sh                       # FTP-specific tests
 monitoring/check_ftp_health.sh          # FTP service monitoring
+'''
 
 ### Member B's Files (Log Analysis)
 # Member B owns these files:
