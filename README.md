@@ -1,72 +1,63 @@
-# Secure User & Log Management System - Team Collaboration Guide
+# 🔒 Secure User & Log Management System
 
-## File Ownership & Responsibilities
+A comprehensive security tool that combines automated user management with advanced log analysis capabilities. This Bash-based system helps system administrators maintain security by detecting failed login attempts, managing user accounts with strong password policies, and generating detailed security reports.
 
-### Amr's Files (FTP Server)
+## 📋 Table of Contents
+- [Features](#features)
+- [Requirements](#requirements)
+- [Installation](#installation)
+- [Quick Start](#quick-start)
+- [Detailed Usage](#detailed-usage)
+- [Configuration](#configuration)
+- [Security Features](#security-features)
+- [File Structure](#file-structure)
+- [Logging & Reporting](#logging--reporting)
+- [Troubleshooting](#troubleshooting)
+- [Best Practices](#best-practices)
+- [FAQ](#faq)
+- [License](#license)
 
-**Member A owns these files:**
+## ✨ Features
 
-| File | Description |
-|------|-------------|
-| `setup_ftp.sh` | Main FTP setup script |
-| `configs/vsftpd.conf.template` | FTP configuration reference |
-| `scripts/ftp_user_manager.sh` | FTP whitelist management |
-| `scripts/setup_ftp_user.sh` | FTP directory setup per user |
-| `tests/test_ftp.sh` | FTP-specific tests |
-| `monitoring/check_ftp_health.sh` | FTP service monitoring |
+### Core Features
+- **🔐 Secure FTP Server**: Automatic setup of vsftpd with TLS/SSL encryption
+- **📊 Failed Login Detection**: Scans `/var/log/auth.log` for unauthorized access attempts
+- **📈 Daily Reports**: Generates comprehensive HTML and text reports
+- **👥 User Management**: Complete user lifecycle management (create, delete, update)
+- **🔑 Password Policy Enforcement**: Enforces strong password requirements
+- **📝 Action Logging**: All actions logged to `/var/log/user_mgmt.log`
 
----
+### Enhanced Features
+- **🤖 Automated Monitoring**: Real-time monitoring with automatic responses
+- **🚫 Interactive User Selection**: Menu-driven user selection for all operations
+- **💾 Backup System**: Automatic backup before user deletion
+- **🔍 Security Anomaly Detection**: Identifies suspicious patterns and brute force attacks
+- **📧 Email Notifications**: Sends alerts for critical security events
 
-### Mohamed's Files (Log Analysis)
+## 🖥️ Requirements
 
-**Member B owns these files:**
+### System Requirements
+- **OS**: Linux (Ubuntu/Debian/RHEL/CentOS)
+- **RAM**: Minimum 512MB
+- **Disk Space**: 100MB for logs and backups
+- **Permissions**: Root or sudo access
 
-| File | Description |
-|------|-------------|
-| `log_analyzer.sh` | Main log analysis script |
-| `configs/crontab.template` | Cron job configuration |
-| `reports/` | Generated HTML reports directory |
-| `scripts/backup_logs.sh` | Log rotation script |
-| `tests/test_log_analyzer.sh` | Log analyzer tests |
-| `tests/fixtures/test_auth.log` | Sample log data for testing |
-| `monitoring/alert_on_bruteforce.sh` | Real-time alerting |
+### Dependencies
+The script automatically installs required packages:
+- `vsftpd` - FTP server
+- `openssl` - SSL/TLS certificates
+- `util-linux` - User management utilities
+- `logrotate` - Log rotation
 
----
+## 📥 Installation
 
-### Mahmoud's Files (User Management)
+### Method 1: Direct Download
+```bash
+# Download the script
+wget https://your-server.com/security_system.sh
 
-**Member C owns these files:**
+# Make executable
+chmod +x security_system.sh
 
-| File | Description |
-|------|-------------|
-| `user_management.sh` | Main user management script |
-| `configs/pwquality.conf.template` | Password policy template |
-| `configs/common-password.template` | PAM configuration template |
-| `scripts/generate_ssh_keys.sh` | SSH key management |
-| `tests/test_user_mgmt.sh` | User management tests |
-| `tests/test_password_policy.sh` | Password strength tests |
-| `monitoring/emergency_lockdown.sh` | Emergency procedures |
-
----
-
-### Shared/Integration Files
-
-**All team members collaborate on:**
-
-| File/Directory | Description |
-|----------------|-------------|
-| `integration_test.sh` | End-to-end testing |
-| `TEST_PLAN.md` | Testing strategy |
-| `docs/` | Shared documentation |
-| `logs/` | Runtime logs (all scripts write here) |
-| `backups/` | Backup storage |
-| `.gitignore` | Version control exclusions |
-
----
-
-## Collaboration Notes
-
-- Each member is responsible for their assigned files
-- Shared files require team review before changes
-- All scripts should log to the shared `logs/` directory
-- Use the integration test script before final submission
+# Run as root
+sudo ./security_system.sh

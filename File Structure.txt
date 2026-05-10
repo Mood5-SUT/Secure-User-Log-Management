@@ -1,0 +1,22 @@
+/var/log/
+├── auth.log                      # System authentication log
+├── user_mgmt.log                 # User management actions log
+└── security_reports/             # Report directory
+    ├── failed_logins_YYYYMMDD.txt
+    ├── summary_YYYYMMDD.txt
+    ├── anomalies_YYYYMMDD.txt
+    └── daily_report_YYYYMMDD.html
+
+/var/secure_ftp/                  # FTP user directories
+├── username1/                    # User-specific FTP folder
+└── username2/
+
+/var/backups/users/               # User backup directory
+├── username1/
+│   └── username1_YYYYMMDD_HHMMSS.tar.gz
+└── username2/
+
+/etc/
+├── vsftpd.conf                   # FTP server configuration
+├── login.defs                    # Password policy settings
+└── security/limits.conf          # User resource limits
