@@ -1,4 +1,3 @@
-```markdown
 # 🔒 Secure User & Log Management System
 
 A comprehensive security tool that combines automated user management with advanced log analysis capabilities. This Bash-based system helps system administrators maintain security by detecting failed login attempts, managing user accounts with strong password policies, and generating detailed security reports.
@@ -62,7 +61,7 @@ chmod +x security_system.sh
 
 # Run as root
 sudo ./security_system.sh
-```
+
 
 ### Method 2: Manual Setup
 ```bash
